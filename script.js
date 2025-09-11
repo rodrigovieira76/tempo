@@ -1,4 +1,4 @@
-class tempoTempo{
+class TempoTempo{
     #parky;
     constructor(){
         this.#parky = 0;
@@ -31,5 +31,5 @@ class EstacionamentoTempo{
             document.getElementById("tempo").textContent = `Tempo: ${tempo}`;
         }
 }
-const park = new tempoTempo();
+const park = new TempoTempo();
 const tempoTempo = new EstacionamentoTempo(park);
