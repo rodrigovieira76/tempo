@@ -1,3 +1,18 @@
+class tempoTempo{
+    #parky;
+    constructor(){
+        this.#parky = 0;
+    }
+
+    tempo(){
+        this.#parky += valor;
+    }
+
+    get park(){
+        return this.#parky;
+    }
+}
+
 class EstacionamentoTempo{
     constructor(park){
         this.park = park;
@@ -16,4 +31,5 @@ class EstacionamentoTempo{
             document.getElementById("tempo").textContent = `Tempo: ${tempo}`;
         }
 }
+const park = new tempoTempo();
 const tempoTempo = new EstacionamentoTempo(park);
