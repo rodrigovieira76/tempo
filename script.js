@@ -1,0 +1,19 @@
+class EstacionamentoTempo{
+    constructor(park){
+        this.park = park;
+    }
+
+    tempo(){
+            
+        const valorTempo = parseFloat(document.getElementById("tempo").value)             
+        
+        this.park.inserir(valorTempo);
+        
+        this.mostrarTempo(this.park.tempo);        
+            
+        }
+        mostrarTempo(tempo){
+            document.getElementById("tempo").textContent = `Tempo: ${tempo}`;
+        }
+}
+const tempoTempo = new EstacionamentoTempo(park);
