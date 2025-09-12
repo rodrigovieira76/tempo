@@ -8,28 +8,33 @@ class TempoTempo{
         this.#parky += valor;
     }
 
+    inserir(){
+        this.#parky += valor;
+    }
+
+
     get park(){
         return this.#parky;
     }
 }
 
 class EstacionamentoTempo{
-    constructor(park){
-        this.park = park;
+    constructor(garage){
+        this.garage = garage;
     }
 
-    tempo(){
+    inserir(){
             
         const valorTempo = parseFloat(document.getElementById("tempo").value)             
         
-        this.park.inserir(valorTempo);
+        this.garage.inserir(valorTempo);
         
-        this.mostrarTempo(this.park.tempo);        
+        this.mostrarTempo(this.garage.park);        
             
         }
-        mostrarTempo(tempo){
-            document.getElementById("tempo").textContent = `Tempo: ${tempo}`;
-        }
+    mostrarTempo(park){
+        document.getElementById("tempo").textContent = `Tempo: ${tempo}`;
+    }
 }
-const park = new TempoTempo();
-const tempoTempo = new EstacionamentoTempo(park);
+const garage = new TempoTempo();
+const tempoTempo = new EstacionamentoTempo(garage);
