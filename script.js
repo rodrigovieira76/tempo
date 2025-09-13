@@ -12,6 +12,9 @@ class TempoTempo{
         this.#parky += valor;
     }
 
+    valorTempo(valor){
+      return valor <= this.#parky;
+    }
 
     get park(){
         return this.#parky;
@@ -29,7 +32,15 @@ class EstacionamentoTempo{
         
         this.garage.inserir(valorTempo);
         
-        this.mostrarTempo(this.garage.park);        
+        this.mostrarTempo(this.garage.park);
+        
+        if(this.garage.valorTempo(valorTempo)){
+            this.garage.inserir(valorTempo);
+            this.mostrarTempo(this.garage.park);
+        }else{
+            
+            this.mostrarTempo("Insuficiente");
+        }
             
         }
     mostrarTempo(park){
